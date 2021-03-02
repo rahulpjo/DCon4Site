@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="688px" height="634px" viewBox="0 0 688 634" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <linearGradient x1="14.6938054%" y1="38.3451275%" x2="86.4573257%" y2="61.6084999%" id="linearGradient-1">
+            <stop stop-color="#D04E55" offset="0%"></stop>
+            <stop stop-color="#DDB853" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="13.1465122%" y1="36.628314%" x2="86.4573257%" y2="61.6084999%" id="linearGradient-2">
+            <stop stop-color="#DDB853" offset="0%"></stop>
+            <stop stop-color="#98DD53" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="7.52201597%" y1="41.5167839%" x2="94.0767938%" y2="45.3743228%" id="linearGradient-3">
+            <stop stop-color="#98DD53" offset="0%"></stop>
+            <stop stop-color="#537FDD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <polygon id="Path" fill="#D04E55" points="0 0 108.259915 0 108.259915 634 0 634"></polygon>
+            <polygon id="Path-Copy" fill="#DDB853" points="193 0 301.259915 0 301.259915 634 193 634"></polygon>
+            <polygon id="Path-Copy-2" fill="#98DD53" points="386 0 494.259915 0 494.259915 634 386 634"></polygon>
+            <polygon id="Path-Copy-3" fill="#537FDD" points="579 0 687.259915 0 687.259915 634 579 634"></polygon>
+            <polygon id="Path-2" fill="url(#linearGradient-1)" points="105.726918 68.8143292 105.726918 134.328285 195.726918 167.532933 195.726918 102.544589"></polygon>
+            <polygon id="Path-2-Copy" fill="url(#linearGradient-2)" transform="translate(343.726918, 517.173631) scale(1, -1) translate(-343.726918, -517.173631) " points="298.726918 467.814329 298.726918 533.328285 388.726918 566.532933 388.726918 501.544589"></polygon>
+            <polygon id="Path-2-Copy-2" fill="url(#linearGradient-3)" transform="translate(535.726918, 339.410825) scale(1, -1) translate(-535.726918, -339.410825) " points="490.726918 312.288717 490.726918 377.802672 580.726918 366.00732 580.726918 301.018977"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,236 @@
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: black;
+        @include easeOut;
+    }
+
+    &.close {
+        transform: rotate(360deg);
+
+        .btn-line {
+            //Line 1
+            &:nth-child(1){
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding, &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: $primary-color;
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &-branding {
+        background: darken($primary-color, 8);
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .portrait {
+            width: 150px;
+            height: 150px;
+            background: url('../img/DC4Logo.svg');
+            background-size: contain;
+        }
+        h1{
+            padding-top: 1rem;
+            font-size: 2.5rem;
+            display: block;
+        }
+        p{
+            padding: 0 50px;
+            font-size: 1.5rem;
+            display: block;
+        }
+        
+        
+        @media screen and (max-width: 850px){
+            h1{
+                padding-top: 1rem;
+                font-size: 2.2rem;
+            }
+            p{
+                padding: 0 50px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            h1{
+                padding-top: 1rem;
+                font-size: 1.5rem;
+            }
+            p{
+                padding: 0 50px;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
+        &.current > .red {
+            color: $site-red;
+        }
+        &.current > .yellow {
+            color: $site-yellow;
+        }
+        &.current > .green {
+            color: $site-green;
+        }
+        &.current > .blue {
+            color: $site-blue;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: set-text-color($primary-color);
+        @include easeOut;
+        @media screen and (max-width: 768px){
+            padding: 0.5rem 0;
+        }
+    }
+    .red:hover {
+        color: $site-red;
+    }
+    .yellow:hover {
+        color: $site-yellow;
+    }
+    .green:hover {
+        color: $site-green;
+    }
+    .blue:hover {
+        color: $site-blue;
+    }
+}
+
+.leaveMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba($color: #000000, $alpha: 0.9);
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-box{
+        margin: 40vh 32vw;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: 3px solid  beige;
+        a{
+            display: inline-block;
+            margin: 0.25rem 0.5rem;
+            padding: 0.5rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            &.redlink{
+                background: $site-red;
+                border: 2px solid $site-red;
+                
+                &:hover{
+                    background: black;
+                    color: $site-red; 
+                }
+            }
+            &.greenlink{
+                background: $site-green;
+                border: 2px solid $site-green;
+                
+                &:hover{
+                    background: black;
+                    color: $site-green; 
+                }
+            }
+            &.bluelink{
+                background: $site-blue;
+                border: 2px solid $site-blue;
+                
+                &:hover{
+                    background: black;
+                    color: $site-blue; 
+                }
+            }
+            
+        }
+    }
+    
+}
+
+@for $x from 1 through 6 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.2s;
+    }
+}

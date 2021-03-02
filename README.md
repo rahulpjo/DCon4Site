@@ -1,2 +1,2 @@
-# DCon4Site
-Code and structure for D Con-4 Website
+# portfolio
+Portfolio website with tabs for different disciplines as well as resume page
